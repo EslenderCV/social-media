@@ -1,0 +1,42 @@
+body {
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  overflow: hidden;
+}
+
+.input-search {
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 12px;
+  padding-left: 10px;
+  background-color: #373a40;
+  border: none;
+  color: white;
+  font-size: 12px;
+}
+
+.input-search:focus {
+  outline: none;
+}
+
+.story {
+  border-radius: 9px;
+}
+
+.inputPost {
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 13px;
+  height: 25px;
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #6d6d6d;
+  width: 95%;
+  border-radius: 5px;
+}

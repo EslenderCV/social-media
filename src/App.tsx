@@ -2,11 +2,31 @@ import Topbar from "./Components/Topbar";
 import { Grid, Paper, Box, Typography } from "@mui/material";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
+import { CalendarMonth, List, Photo, VideoCall } from "@mui/icons-material";
 
 const user = {
   name: "Eslender Cruz",
   photo: "../src/assets/userpfp.jpeg",
 };
+
+const options = [
+  {
+    name: "Photo",
+    icon: <Photo sx={{ color: "#00FE99" }} />,
+  },
+  {
+    name: "Video",
+    icon: <VideoCall sx={{ color: "#0099FE" }} />,
+  },
+  {
+    name: "Poll",
+    icon: <List sx={{ color: "#FE9900" }} />,
+  },
+  {
+    name: "Schedule",
+    icon: <CalendarMonth sx={{ color: "#FE6FBB" }} />,
+  },
+];
 
 const stories = [
   {
@@ -195,12 +215,41 @@ function App() {
                       placeholder="Tell your friends about your thoughts..."
                     />
                   </Grid>
-                  <Grid lg={3}>
-                    <Paper>photo</Paper>
+                  <Grid
+                    container
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {options.map((item, idx) => (
+                      <Grid
+                        lg={3}
+                        key={idx}
+                        sx={{ display: "flex", justifyContent: "center" }}
+                      >
+                        <Paper
+                          sx={{
+                            display: "flex",
+                            color: "#FFF",
+                            marginTop: 2,
+                            gap: 1,
+                            background: "#151515",
+                            width: "60%",
+                            padding: 0.5,
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          {item.icon}
+                          <Typography sx={{ fontSize: 12 }}>
+                            {item.name}
+                          </Typography>
+                        </Paper>
+                      </Grid>
+                    ))}
                   </Grid>
-                  <Grid lg={3}>video</Grid>
-                  <Grid lg={3}>poll</Grid>
-                  <Grid lg={3}>schedule</Grid>
                 </Grid>
               </Grid>
             </Paper>

@@ -2,7 +2,14 @@ import Topbar from "./Components/Topbar";
 import { Grid, Paper, Box, Typography } from "@mui/material";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
-import { CalendarMonth, List, Photo, VideoCall } from "@mui/icons-material";
+import {
+  CalendarMonth,
+  List,
+  MoreVertOutlined,
+  Photo,
+  Verified,
+  VideoCall,
+} from "@mui/icons-material";
 
 const user = {
   name: "Eslender Cruz",
@@ -260,12 +267,70 @@ function App() {
                 padding: 3,
                 margin: 1.3,
                 height: "43%",
+                display: "flex",
+                flexDirection: "column",
               }}
               elevation={0}
             >
-              <Grid item lg={2}>
-                Item 2
-              </Grid>
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                  <Box
+                    sx={{
+                      width: "40px",
+                      height: "40px",
+                      overflow: "hidden",
+                      borderRadius: 2,
+                      border: "3px solid #151515",
+                    }}
+                  >
+                    <img src={stories[3].pfp} width="100%" />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      color: "#FFF",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        color: "#6D6D6D",
+                        fontSize: 11,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 0.3,
+                      }}
+                    >
+                      @Shermanpi{" "}
+                      <Verified sx={{ fontSize: 11, color: "lightblue" }} />
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontSize: 15,
+                        fontWeight: "bold",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                      }}
+                    >
+                      {stories[3].name} Perez
+                      <div className="ago">
+                        <li>
+                          <span>1hr ago</span>
+                        </li>
+                      </div>
+                    </Typography>
+                  </Box>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#FFF" }} />
+              </Box>
+              <Box></Box>
             </Paper>
           </Grid>
         </Grid>

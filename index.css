@@ -40,3 +40,14 @@ body {
   width: 95%;
   border-radius: 5px;
 }
+
+.ago li span {
+  position: relative;
+  left: -10px;
+}
+
+.ago {
+  color: #2e7d32;
+  font-size: 13px;
+  font-weight: 650;
+}

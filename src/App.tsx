@@ -4,12 +4,14 @@ import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRig
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
 import {
   CalendarMonth,
-  ChatBubbleOutlineRounded,
+  Comment,
+  CommentBank,
   Favorite,
   IosShareOutlined,
   List,
   MoreVertOutlined,
   Photo,
+  Reply,
   Verified,
   VideoCall,
 } from "@mui/icons-material";
@@ -140,7 +142,7 @@ function App() {
                   overflow: "hidden",
                   width: "100%",
                   justifyContent: "center",
-                  height: "99%",
+                  height: "100%",
                 }}
               >
                 {stories.map((item) => {
@@ -383,7 +385,6 @@ function App() {
                 >
                   <Favorite color="warning" />
                   <IosShareOutlined sx={{ color: "#6D6D6D" }} />
-                  <ChatBubbleOutlineRounded sx={{ color: "#6D6D6D" }} />
                 </Box>
               </Box>
             </Paper>

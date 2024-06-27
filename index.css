@@ -41,6 +41,19 @@ body {
   border-radius: 5px;
 }
 
+.inputComment {
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 13px;
+  height: 17px;
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #6d6d6d;
+  width: 70%;
+  border-radius: 5px;
+}
+
 .ago li span {
   position: relative;
   left: -10px;
@@ -50,4 +63,12 @@ body {
   color: #2e7d32;
   font-size: 13px;
   font-weight: 650;
+}
+
+a {
+  color: white;
+}
+
+.roundedImg {
+  border-radius: 10px;
 }

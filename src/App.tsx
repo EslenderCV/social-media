@@ -4,9 +4,15 @@ import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRig
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
 import {
   CalendarMonth,
+  ChatBubbleOutlineRounded,
+  Comment,
+  CommentBank,
+  Favorite,
+  IosShareOutlined,
   List,
   MoreVertOutlined,
   Photo,
+  Reply,
   Verified,
   VideoCall,
 } from "@mui/icons-material";
@@ -77,8 +83,7 @@ function App() {
   return (
     <>
       <Topbar />
-      <br />
-      <Grid container sx={{ width: "100%", height: "87vh" }}>
+      <Grid container sx={{ width: "100%", height: "89vh" }}>
         <Grid item lg={2} sx={{ display: "flex", justifyContent: "center" }}>
           <Grid container>
             <Paper
@@ -194,9 +199,9 @@ function App() {
                 borderRadius: 4,
                 backgroundColor: "#202020",
                 padding: 2,
+                marginTop: 0,
                 margin: 1.3,
                 height: "14%",
-                marginTop: 3,
               }}
               elevation={0}
             >
@@ -266,7 +271,7 @@ function App() {
                 backgroundColor: "#202020",
                 padding: 3,
                 margin: 1.3,
-                height: "43%",
+                height: "50%",
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -330,7 +335,60 @@ function App() {
                 </Box>
                 <MoreVertOutlined sx={{ color: "#FFF" }} />
               </Box>
-              <Box></Box>
+              <Box
+                sx={{
+                  padding: 1,
+                  paddingLeft: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography sx={{ color: "#FFF", fontSize: 14 }}>
+                  Just finished building this beautiful look music player, you
+                  can find it on{" "}
+                  <a
+                    href="https://music-player-dun-eta.vercel.app/"
+                    target="_blank"
+                  >
+                    https://music-player-dun-eta.vercel.app/
+                  </a>
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    width: "100%",
+                    paddingTop: "10px",
+                  }}
+                >
+                  <img
+                    src="../../../src/assets/postImg.png"
+                    height="200px"
+                    width="360px"
+                    className="roundedImg"
+                  />
+                  <img
+                    src="../../../src/assets/postImg2.png"
+                    height="200px"
+                    width="360px"
+                    className="roundedImg"
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    height: "50px",
+                    width: "100%",
+                    justifyContent: "right",
+                    gap: 1,
+                  }}
+                >
+                  <Favorite color="warning" />
+                  <IosShareOutlined sx={{ color: "#6D6D6D" }} />
+                  <ChatBubbleOutlineRounded sx={{ color: "#6D6D6D" }} />
+                </Box>
+              </Box>
             </Paper>
           </Grid>
         </Grid>

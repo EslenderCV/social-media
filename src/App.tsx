@@ -140,7 +140,7 @@ function App() {
                   overflow: "hidden",
                   width: "100%",
                   justifyContent: "center",
-                  height: "100%",
+                  height: "99%",
                 }}
               >
                 {stories.map((item) => {

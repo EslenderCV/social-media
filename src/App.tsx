@@ -5,14 +5,11 @@ import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeft
 import {
   CalendarMonth,
   ChatBubbleOutlineRounded,
-  Comment,
-  CommentBank,
   Favorite,
   IosShareOutlined,
   List,
   MoreVertOutlined,
   Photo,
-  Reply,
   Verified,
   VideoCall,
 } from "@mui/icons-material";

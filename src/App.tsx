@@ -4,6 +4,7 @@ import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRig
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
 import {
   CalendarMonth,
+  ChatBubbleOutlineOutlined,
   Comment,
   CommentBank,
   Favorite,
@@ -385,6 +386,7 @@ function App() {
                 >
                   <Favorite color="warning" />
                   <IosShareOutlined sx={{ color: "#6D6D6D" }} />
+                  <ChatBubbleOutlineOutlined sx={{ color: "#6D6D6D" }} />
                 </Box>
               </Box>
             </Paper>

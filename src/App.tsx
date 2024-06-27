@@ -87,16 +87,96 @@ function App() {
               sx={{
                 borderRadius: 4,
                 backgroundColor: "#202020",
-                padding: 3,
                 width: "100%",
                 margin: 1.3,
+                overflow: "hidden",
               }}
               elevation={0}
             >
-              <Grid item lg={12}>
-                {" "}
-                item 1
-              </Grid>
+              <Box sx={{ position: "relative" }}>
+                <img
+                  src="../../../src/assets/backgroundUser.jpg"
+                  width="100%"
+                />
+                <MoreVertOutlined
+                  sx={{
+                    color: "#FFF",
+                    position: "absolute",
+                    right: 0,
+                    marginTop: 1,
+                  }}
+                />
+                <Box
+                  sx={{
+                    width: "70px",
+                    height: "70px",
+                    overflow: "hidden",
+                    borderRadius: 2,
+                    border: "3px solid #151515",
+                    position: "absolute",
+                    top: "85px",
+                    left: "32%",
+                  }}
+                >
+                  <img src={user.photo} width="100%" />
+                </Box>
+                <Box
+                  sx={{
+                    color: "white",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "absolute",
+                    width: "100%",
+                    top: "170px",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
+                    Eslender Cruz
+                  </Typography>
+                  <Typography
+                    sx={{ fontSize: 12, color: "#6D6D6D", fontWeight: "light" }}
+                  >
+                    @whoseslender
+                  </Typography>
+                  <Typography
+                    sx={{ fontSize: 11, color: "#2e7d32", fontWeight: "bold" }}
+                  >
+                    Full-Stack Developer
+                  </Typography>
+                  <Box sx={{ display: "flex", gap: 3, marginTop: 4 }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography sx={{ fontWeight: "bold", fontSize: 12 }}>
+                        1.2K
+                      </Typography>
+                      <Typography sx={{ fontSize: 12, color: "#6D6D6D" }}>
+                        Following
+                      </Typography>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography sx={{ fontWeight: "bold", fontSize: 12 }}>
+                        11K
+                      </Typography>
+                      <Typography sx={{ fontSize: 12, color: "#6D6D6D" }}>
+                        Followers
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
             </Paper>
             <Paper
               sx={{
@@ -341,8 +421,8 @@ function App() {
                 }}
               >
                 <Typography sx={{ color: "#FFF", fontSize: 14 }}>
-                  Just finished building this beautiful look music player, you
-                  can find it on{" "}
+                  Just finished building this beautiful looking music player,
+                  you can find it on{" "}
                   <a
                     href="https://music-player-dun-eta.vercel.app/"
                     target="_blank"

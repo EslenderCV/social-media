@@ -43,36 +43,43 @@ const stories = [
     name: "Jakiry",
     pfp: "./src/assets/pfp2.jpeg",
     toview: true,
+    at: "@Soribel23",
   },
   {
     name: "Isaac",
     pfp: "./src/assets/pfp.jpeg",
     toview: false,
+    at: "@Isaaccruz",
   },
   {
     name: "Clemencia",
     pfp: "./src/assets/pfp5.jpeg",
     toview: false,
+    at: "@ClemenV",
   },
   {
     name: "Sherman",
     pfp: "./src/assets/pfp3.jpeg",
     toview: false,
+    at: "@Shermanpi",
   },
   {
     name: "Daniel",
     pfp: "./src/assets/pfp7.jpeg",
     toview: false,
+    at: "@Juan_daniel",
   },
   {
     name: "Richard",
     pfp: "./src/assets/pfp6.jpeg",
     toview: false,
+    at: "@MoralesR",
   },
   {
     name: "Angel",
     pfp: "./src/assets/pfp4.jpeg",
     toview: false,
+    at: "@Daviddiaz",
   },
 ];
 
@@ -89,7 +96,9 @@ function App() {
                 backgroundColor: "#202020",
                 width: "100%",
                 margin: 1.3,
+                marginBottom: 0,
                 overflow: "hidden",
+                height: "48%",
               }}
               elevation={0}
             >
@@ -182,15 +191,127 @@ function App() {
               sx={{
                 borderRadius: 4,
                 backgroundColor: "transparent",
-                padding: 3,
                 width: "100%",
-                margin: 1.3,
+                paddingTop: 0,
+                padding: 2,
+                color: "#FFF",
+                display: "flex",
+                flexDirection: "column",
+                height: "37%",
               }}
               elevation={0}
             >
-              <Grid item lg={12}>
-                Item 2
-              </Grid>
+              <Typography sx={{ fontWeight: "bold", fontSize: 15 }}>
+                Recent chats
+              </Typography>
+              <Box sx={{ display: "flex", marginTop: 1, gap: 1 }}>
+                <Box
+                  sx={{
+                    width: "40px",
+                    height: "40px",
+                    overflow: "hidden",
+                    borderRadius: 2,
+                    border: "2px solid #151515",
+                  }}
+                >
+                  <img src={stories[0].pfp} width="100%" />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 13 }}>
+                    {stories[0].name}
+                  </Typography>
+                  <Typography sx={{ fontSize: 12, color: "#6D6D6D" }}>
+                    {stories[0].at}
+                  </Typography>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", marginTop: 1, gap: 1 }}>
+                <Box
+                  sx={{
+                    width: "40px",
+                    height: "40px",
+                    overflow: "hidden",
+                    borderRadius: 2,
+                    border: "2px solid #151515",
+                  }}
+                >
+                  <img src={stories[1].pfp} width="100%" />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 13 }}>
+                    {stories[1].name}
+                  </Typography>
+                  <Typography sx={{ fontSize: 12, color: "#6D6D6D" }}>
+                    {stories[1].at}
+                  </Typography>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", marginTop: 1, gap: 1 }}>
+                <Box
+                  sx={{
+                    width: "40px",
+                    height: "40px",
+                    overflow: "hidden",
+                    borderRadius: 2,
+                    border: "2px solid #151515",
+                  }}
+                >
+                  <img src={stories[2].pfp} width="100%" />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 13 }}>
+                    {stories[2].name}
+                  </Typography>
+                  <Typography sx={{ fontSize: 12, color: "#6D6D6D" }}>
+                    {stories[2].at}
+                  </Typography>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", marginTop: 1, gap: 1 }}>
+                <Box
+                  sx={{
+                    width: "40px",
+                    height: "40px",
+                    overflow: "hidden",
+                    borderRadius: 2,
+                    border: "2px solid #151515",
+                  }}
+                >
+                  <img src={stories[3].pfp} width="100%" />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 13 }}>
+                    {stories[3].name}
+                  </Typography>
+                  <Typography sx={{ fontSize: 12, color: "#6D6D6D" }}>
+                    {stories[3].at}
+                  </Typography>
+                </Box>
+              </Box>
             </Paper>
           </Grid>
         </Grid>
@@ -389,7 +510,7 @@ function App() {
                         gap: 0.3,
                       }}
                     >
-                      @Shermanpi{" "}
+                      {stories[3].at}{" "}
                       <Verified sx={{ fontSize: 11, color: "lightblue" }} />
                     </Typography>
                     <Typography

@@ -6,6 +6,8 @@ import {
   CalendarMonth,
   ChatBubbleOutlineOutlined,
   Favorite,
+  FavoriteBorderOutlined,
+  FavoriteOutlined,
   IosShareOutlined,
   List,
   MoreVertOutlined,
@@ -13,6 +15,7 @@ import {
   Verified,
   VideoCall,
 } from "@mui/icons-material";
+import { useState } from "react";
 
 const user = {
   name: "Eslender Cruz",
@@ -84,6 +87,7 @@ const stories = [
 ];
 
 function App() {
+  const [like, setLike] = useState(true);
   return (
     <>
       <Topbar />
@@ -563,7 +567,31 @@ function App() {
                     gap: 2,
                   }}
                 >
-                  <Favorite color="warning" sx={{ fontSize: 16 }} />
+                  {like ? (
+                    <Favorite
+                      onClick={() => setLike(like ? false : true)}
+                      color="warning"
+                      sx={{
+                        fontSize: 16,
+                        transition: ".2s",
+                        "&:hover": {
+                          scale: "1.2",
+                        },
+                      }}
+                    />
+                  ) : (
+                    <FavoriteBorderOutlined
+                      onClick={() => setLike(like ? false : true)}
+                      sx={{
+                        color: "#6D6D6D",
+                        fontSize: 16,
+                        transition: ".2s",
+                        "&:hover": {
+                          scale: "1.2",
+                        },
+                      }}
+                    />
+                  )}
                   <IosShareOutlined sx={{ color: "#6D6D6D", fontSize: 16 }} />
                   <ChatBubbleOutlineOutlined
                     sx={{ color: "#6D6D6D", fontSize: 16 }}
@@ -603,9 +631,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>#HurricaneBeryl</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    33.2K posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -618,9 +646,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>Epstein</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    211K posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -633,9 +661,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>#ALERTA</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    8,814 posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -648,9 +676,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>La Romana</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    2,402 posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -663,9 +691,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>Osiris</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    1,979 posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -678,9 +706,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>Michelle Obama</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    35.3K posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -693,9 +721,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>Senado</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    39K posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -708,9 +736,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>Isla Beata</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    1,373 posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
@@ -723,9 +751,9 @@ function App() {
                 }}
               >
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ fontSize: 14 }}>14 Pro Max</Typography>
                   <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
-                    280K posts
+                    18.9K posts
                   </Typography>
                 </Box>
                 <MoreVertOutlined sx={{ color: "#6D6D6D" }} />

@@ -88,7 +88,7 @@ function App() {
     <>
       <Topbar />
       <Grid container sx={{ width: "100%", height: "89vh" }}>
-        <Grid item lg={2} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid item lg={3} sx={{ display: "flex", justifyContent: "center" }}>
           <Grid container>
             <Paper
               sx={{
@@ -100,12 +100,13 @@ function App() {
                 overflow: "hidden",
                 height: "48%",
               }}
-              elevation={0}
+              elevation={2}
             >
               <Box sx={{ position: "relative" }}>
                 <img
                   src="../../../src/assets/backgroundUser.jpg"
                   width="100%"
+                  height="120px"
                 />
                 <MoreVertOutlined
                   sx={{
@@ -124,7 +125,7 @@ function App() {
                     border: "3px solid #151515",
                     position: "absolute",
                     top: "85px",
-                    left: "32%",
+                    left: "38%",
                   }}
                 >
                   <img src={user.photo} width="100%" />
@@ -317,7 +318,7 @@ function App() {
         </Grid>
         <Grid
           item
-          lg={8}
+          lg={6}
           sx={{ display: "flex", justifyContent: "center", height: "100%" }}
         >
           <Grid container direction="column" alignItems="stretch">
@@ -331,10 +332,13 @@ function App() {
                 marginBottom: 0,
                 display: "flex",
                 alignItems: "center",
+                width: "100%",
               }}
               elevation={0}
             >
-              <KeyboardArrowLeftOutlinedIcon sx={{ color: "white" }} />
+              <KeyboardArrowLeftOutlinedIcon
+                sx={{ color: "white", marginBottom: 2 }}
+              />
               <Box
                 sx={{
                   display: "flex",
@@ -358,8 +362,8 @@ function App() {
                           marginRight: 3,
                           borderRadius: 4,
                           overflow: "hidden",
-                          width: "50px",
-                          height: "50px",
+                          width: "40px",
+                          height: "40px",
                           padding: "5px",
                           border: `1px solid ${
                             item.toview ? "#2e7d32" : "gray"
@@ -390,76 +394,76 @@ function App() {
                   );
                 })}
               </Box>
-              <KeyboardArrowRightOutlinedIcon sx={{ color: "white" }} />
+              <KeyboardArrowRightOutlinedIcon
+                sx={{ color: "white", marginBottom: 2 }}
+              />
             </Paper>
             <Paper
               sx={{
                 borderRadius: 4,
                 backgroundColor: "#202020",
-                padding: 2,
                 marginTop: 0,
-                margin: 1.3,
                 height: "14%",
+                width: "95%",
+                padding: 2,
               }}
-              elevation={0}
+              elevation={2}
             >
-              <Grid item>
-                <Grid container sx={{ display: "flex", alignItems: "center" }}>
-                  <Grid lg={1}>
-                    <Box
-                      sx={{
-                        width: "40px",
-                        height: "40px",
-                        overflow: "hidden",
-                        borderRadius: 2,
-                        border: "3px solid #151515",
-                      }}
-                    >
-                      <img src={user.photo} width="100%" />
-                    </Box>
-                  </Grid>
-                  <Grid lg={11}>
-                    <input
-                      type="text"
-                      className="inputPost"
-                      placeholder="Tell your friends about your thoughts..."
-                    />
-                  </Grid>
-                  <Grid
-                    container
+              <Grid container sx={{ display: "flex", alignItems: "center" }}>
+                <Grid lg={1}>
+                  <Box
                     sx={{
-                      width: "100%",
-                      display: "flex",
-                      justifyContent: "center",
+                      width: "30px",
+                      height: "30px",
+                      overflow: "hidden",
+                      borderRadius: 2,
+                      border: "3px solid #151515",
                     }}
                   >
-                    {options.map((item, idx) => (
-                      <Grid
-                        lg={3}
-                        key={idx}
-                        sx={{ display: "flex", justifyContent: "center" }}
+                    <img src={user.photo} width="100%" />
+                  </Box>
+                </Grid>
+                <Grid lg={11}>
+                  <input
+                    type="text"
+                    className="inputPost"
+                    placeholder="Tell your friends about your thoughts..."
+                  />
+                </Grid>
+                <Grid
+                  container
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  {options.map((item, idx) => (
+                    <Grid
+                      lg={3}
+                      key={idx}
+                      sx={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <Paper
+                        sx={{
+                          display: "flex",
+                          color: "#FFF",
+                          marginTop: 2,
+                          gap: 1,
+                          background: "#151515",
+                          width: "60%",
+                          padding: 0.5,
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
                       >
-                        <Paper
-                          sx={{
-                            display: "flex",
-                            color: "#FFF",
-                            marginTop: 2,
-                            gap: 1,
-                            background: "#151515",
-                            width: "60%",
-                            padding: 0.5,
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          {item.icon}
-                          <Typography sx={{ fontSize: 12 }}>
-                            {item.name}
-                          </Typography>
-                        </Paper>
-                      </Grid>
-                    ))}
-                  </Grid>
+                        {item.icon}
+                        <Typography sx={{ fontSize: 12 }}>
+                          {item.name}
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  ))}
                 </Grid>
               </Grid>
             </Paper>
@@ -467,13 +471,14 @@ function App() {
               sx={{
                 borderRadius: 4,
                 backgroundColor: "#202020",
-                padding: 3,
-                margin: 1.3,
-                height: "50%",
+                height: "56%",
+                width: "95%",
                 display: "flex",
                 flexDirection: "column",
+                padding: 2,
+                marginTop: 1,
               }}
-              elevation={0}
+              elevation={2}
             >
               <Box
                 sx={{
@@ -482,11 +487,11 @@ function App() {
                   justifyContent: "space-between",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                   <Box
                     sx={{
-                      width: "40px",
-                      height: "40px",
+                      width: "30px",
+                      height: "30px",
                       overflow: "hidden",
                       borderRadius: 2,
                       border: "3px solid #151515",
@@ -504,18 +509,18 @@ function App() {
                     <Typography
                       sx={{
                         color: "#6D6D6D",
-                        fontSize: 11,
+                        fontSize: 10,
                         display: "flex",
                         alignItems: "center",
                         gap: 0.3,
                       }}
                     >
                       {stories[3].at}{" "}
-                      <Verified sx={{ fontSize: 11, color: "lightblue" }} />
+                      <Verified sx={{ fontSize: 10, color: "lightblue" }} />
                     </Typography>
                     <Typography
                       sx={{
-                        fontSize: 15,
+                        fontSize: 13,
                         fontWeight: "bold",
                         display: "flex",
                         alignItems: "center",
@@ -535,13 +540,11 @@ function App() {
               </Box>
               <Box
                 sx={{
-                  padding: 1,
-                  paddingLeft: 0,
                   display: "flex",
                   flexDirection: "column",
                 }}
               >
-                <Typography sx={{ color: "#FFF", fontSize: 14 }}>
+                <Typography sx={{ color: "#FFF", fontSize: 12 }}>
                   Just finished building this beautiful looking music player,
                   you can find it on{" "}
                   <a
@@ -556,19 +559,14 @@ function App() {
                     display: "flex",
                     gap: 2,
                     width: "100%",
+                    height: "100%",
                     paddingTop: "10px",
                   }}
                 >
                   <img
                     src="../../../src/assets/postImg.png"
-                    height="200px"
-                    width="360px"
-                    className="roundedImg"
-                  />
-                  <img
-                    src="../../../src/assets/postImg2.png"
-                    height="200px"
-                    width="360px"
+                    width="100%"
+                    height="250px"
                     className="roundedImg"
                   />
                 </Box>
@@ -576,21 +574,23 @@ function App() {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    height: "50px",
+                    height: "30px",
                     width: "100%",
-                    justifyContent: "right",
-                    gap: 1,
+                    justifyContent: "center",
+                    gap: 2,
                   }}
                 >
-                  <Favorite color="warning" />
-                  <IosShareOutlined sx={{ color: "#6D6D6D" }} />
-                  <ChatBubbleOutlineOutlined sx={{ color: "#6D6D6D" }} />
+                  <Favorite color="warning" sx={{ fontSize: 16 }} />
+                  <IosShareOutlined sx={{ color: "#6D6D6D", fontSize: 16 }} />
+                  <ChatBubbleOutlineOutlined
+                    sx={{ color: "#6D6D6D", fontSize: 16 }}
+                  />
                 </Box>
               </Box>
             </Paper>
           </Grid>
         </Grid>
-        <Grid item lg={2} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid item lg={3} sx={{ display: "flex", justifyContent: "center" }}>
           <Paper
             sx={{
               borderRadius: 4,
@@ -600,7 +600,7 @@ function App() {
               margin: 1.3,
               height: "89%",
             }}
-            elevation={0}
+            elevation={2}
           ></Paper>
         </Grid>
       </Grid>

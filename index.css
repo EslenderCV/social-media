@@ -32,25 +32,12 @@ body {
   padding: 10px;
   padding-left: 20px;
   font-size: 13px;
-  height: 25px;
+  height: 18px;
   border: none;
   outline: none;
   background-color: #151515;
   color: #6d6d6d;
   width: 95%;
-  border-radius: 5px;
-}
-
-.inputComment {
-  padding: 10px;
-  padding-left: 20px;
-  font-size: 13px;
-  height: 17px;
-  border: none;
-  outline: none;
-  background-color: #151515;
-  color: #6d6d6d;
-  width: 70%;
   border-radius: 5px;
 }
 

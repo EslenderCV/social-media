@@ -7,7 +7,6 @@ import {
   ChatBubbleOutlineOutlined,
   Favorite,
   FavoriteBorderOutlined,
-  FavoriteOutlined,
   IosShareOutlined,
   List,
   MoreVertOutlined,

@@ -321,82 +321,65 @@ function App() {
           lg={6}
           sx={{ display: "flex", justifyContent: "center", height: "100%" }}
         >
-          <Grid container direction="column" alignItems="stretch">
+          <Grid container direction="column">
             <Paper
               sx={{
-                borderRadius: 4,
                 backgroundColor: "transparent",
                 padding: 0,
-                margin: 1.3,
                 height: "15%",
                 marginBottom: 0,
                 display: "flex",
                 alignItems: "center",
                 width: "100%",
+                justifyContent: "center",
+                gap: 3,
               }}
               elevation={0}
             >
-              <KeyboardArrowLeftOutlinedIcon
-                sx={{ color: "white", marginBottom: 2 }}
-              />
-              <Box
-                sx={{
-                  display: "flex",
-                  overflow: "hidden",
-                  width: "100%",
-                  justifyContent: "center",
-                  height: "100%",
-                }}
-              >
-                {stories.map((item) => {
-                  return (
+              <KeyboardArrowLeftOutlinedIcon sx={{ color: "white" }} />
+              {stories.map((item) => {
+                return (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Box
                       sx={{
-                        display: "flex",
-                        flexDirection: "column",
+                        borderRadius: 4,
+                        overflow: "hidden",
+                        width: "40px",
+                        height: "40px",
+                        padding: "5px",
+                        border: `1px solid ${item.toview ? "#2e7d32" : "gray"}`,
                         alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
-                      <Box
-                        sx={{
-                          marginRight: 3,
-                          borderRadius: 4,
-                          overflow: "hidden",
-                          width: "40px",
-                          height: "40px",
-                          padding: "5px",
-                          border: `1px solid ${
-                            item.toview ? "#2e7d32" : "gray"
-                          }`,
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <img
-                          src={item.pfp}
-                          width="100%"
-                          height="100%"
-                          className="story"
-                        />
-                      </Box>
-                      <Typography
-                        sx={{
-                          color: `${item.toview ? "white" : "#999"}`,
-                          fontSize: 12,
-                          textAlign: "center",
-                          marginRight: 3,
-                          marginTop: 1,
-                        }}
-                      >
-                        {item.name}
-                      </Typography>
+                      <img
+                        src={item.pfp}
+                        width="100%"
+                        height="100%"
+                        className="story"
+                      />
                     </Box>
-                  );
-                })}
-              </Box>
-              <KeyboardArrowRightOutlinedIcon
-                sx={{ color: "white", marginBottom: 2 }}
-              />
+                    <Typography
+                      sx={{
+                        color: `${item.toview ? "white" : "#999"}`,
+                        fontSize: 12,
+                        textAlign: "center",
+                        marginTop: 1,
+                      }}
+                    >
+                      {item.name}
+                    </Typography>
+                  </Box>
+                );
+              })}
+              <KeyboardArrowRightOutlinedIcon sx={{ color: "white" }} />
             </Paper>
             <Paper
               sx={{
@@ -413,11 +396,11 @@ function App() {
                 <Grid lg={1}>
                   <Box
                     sx={{
-                      width: "30px",
-                      height: "30px",
+                      width: "40px",
+                      height: "40px",
                       overflow: "hidden",
                       borderRadius: 2,
-                      border: "3px solid #151515",
+                      border: "2px solid #151515",
                     }}
                   >
                     <img src={user.photo} width="100%" />
@@ -471,7 +454,7 @@ function App() {
               sx={{
                 borderRadius: 4,
                 backgroundColor: "#202020",
-                height: "56%",
+                height: "58%",
                 width: "95%",
                 display: "flex",
                 flexDirection: "column",
@@ -566,7 +549,7 @@ function App() {
                   <img
                     src="../../../src/assets/postImg.png"
                     width="100%"
-                    height="250px"
+                    height="265x"
                     className="roundedImg"
                   />
                 </Box>
@@ -595,13 +578,171 @@ function App() {
             sx={{
               borderRadius: 4,
               backgroundColor: "#202020",
-              padding: 3,
+              padding: 2,
               width: "100%",
               margin: 1.3,
-              height: "89%",
+              height: "92%",
+              display: "flex",
+              flexDirection: "column",
+              color: "white",
             }}
             elevation={2}
-          ></Paper>
+          >
+            <Typography
+              sx={{ fontWeight: "bold", color: "white", fontSize: 18 }}
+            >
+              Trends for you
+            </Typography>
+            <br />
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ fontSize: 14 }}>Posts 1</Typography>
+                  <Typography sx={{ color: "#6D6D6D", fontSize: 12 }}>
+                    280K posts
+                  </Typography>
+                </Box>
+                <MoreVertOutlined sx={{ color: "#6D6D6D" }} />
+              </Box>
+              <Typography
+                sx={{
+                  color: "lightblue",
+                  textAlign: "right",
+                  position: "relative",
+                  top: "20px",
+                  fontSize: 14,
+                }}
+              >
+                Show more
+              </Typography>
+            </Box>
+          </Paper>
         </Grid>
       </Grid>
     </>

@@ -17,7 +17,7 @@ import {
 import { useState } from "react";
 
 const user = {
-  name: "Eslender Cruz",
+  name: "Eslender C",
   photo: "./assets/userpfp.jpeg",
 };
 

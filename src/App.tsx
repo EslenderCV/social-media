@@ -16,8 +16,16 @@ import {
 } from "@mui/icons-material";
 
 import userPfp from "./assets/userpfp.jpeg";
-
+import userBackground from "./assets/backgroundUser.jpg";
 import { useState } from "react";
+import user1 from "./assets/pfp.jpeg";
+import user2 from "./assets/pfp2.jpeg";
+import user3 from "./assets/pfp3.jpeg";
+import user4 from "./assets/pfp4.jpeg";
+import user5 from "./assets/pfp5.jpeg";
+import user6 from "./assets/pfp6.jpeg";
+import user7 from "./assets/pfp7.jpeg";
+import postImg from "./assets/postImg.png";
 
 const user = {
   name: "Eslender C",
@@ -46,43 +54,43 @@ const options = [
 const stories = [
   {
     name: "Jakiry",
-    pfp: "src/assets/pfp2.jpeg",
+    pfp: user2,
     toview: true,
     at: "@Soribel23",
   },
   {
     name: "Isaac",
-    pfp: "../../src/assets/pfp.jpeg",
+    pfp: user1,
     toview: false,
     at: "@Isaaccruz",
   },
   {
     name: "Clemencia",
-    pfp: "/src/assets/pfp5.jpeg",
+    pfp: user5,
     toview: false,
     at: "@ClemenV",
   },
   {
     name: "Sherman",
-    pfp: "/assets/pfp3.jpeg",
+    pfp: user3,
     toview: false,
     at: "@Shermanpi",
   },
   {
     name: "Daniel",
-    pfp: "assets/pfp7.jpeg",
+    pfp: user7,
     toview: false,
     at: "@Juan_daniel",
   },
   {
     name: "Richard",
-    pfp: "./assets/pfp6.jpeg",
+    pfp: user6,
     toview: false,
     at: "@MoralesR",
   },
   {
     name: "Angel",
-    pfp: "./src/assets/pfp4.jpeg",
+    pfp: user4,
     toview: false,
     at: "@Daviddiaz",
   },
@@ -109,11 +117,7 @@ function App() {
               elevation={2}
             >
               <Box sx={{ position: "relative" }}>
-                <img
-                  src="../../../src/assets/backgroundUser.jpg"
-                  width="100%"
-                  height="120px"
-                />
+                <img src={userBackground} width="100%" height="120px" />
                 <MoreVertOutlined
                   sx={{
                     color: "#FFF",
@@ -553,7 +557,7 @@ function App() {
                   }}
                 >
                   <img
-                    src="../../../src/assets/postImg.png"
+                    src={postImg}
                     width="100%"
                     height="265x"
                     className="roundedImg"

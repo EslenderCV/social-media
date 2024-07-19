@@ -18,7 +18,7 @@ import { useState } from "react";
 
 const user = {
   name: "Eslender C",
-  photo: "./assets/userpfp.jpeg",
+  photo: "/assets/userpfp.jpeg",
 };
 
 const options = [

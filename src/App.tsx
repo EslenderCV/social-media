@@ -146,7 +146,7 @@ function App() {
                   }}
                 >
                   <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
-                    Eslender Cruz
+                    Eslender C.
                   </Typography>
                   <Typography
                     sx={{ fontSize: 12, color: "#6D6D6D", fontWeight: "light" }}

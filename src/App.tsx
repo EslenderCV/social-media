@@ -14,11 +14,14 @@ import {
   Verified,
   VideoCall,
 } from "@mui/icons-material";
+
+import userPfp from "./assets/userpfp.jpeg";
+
 import { useState } from "react";
 
 const user = {
   name: "Eslender C",
-  photo: "/assets/userpfp.jpeg",
+  photo: userPfp,
 };
 
 const options = [

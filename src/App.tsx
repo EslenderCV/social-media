@@ -43,37 +43,37 @@ const options = [
 const stories = [
   {
     name: "Jakiry",
-    pfp: "./src/assets/pfp2.jpeg",
+    pfp: "src/assets/pfp2.jpeg",
     toview: true,
     at: "@Soribel23",
   },
   {
     name: "Isaac",
-    pfp: "./src/assets/pfp.jpeg",
+    pfp: "../../src/assets/pfp.jpeg",
     toview: false,
     at: "@Isaaccruz",
   },
   {
     name: "Clemencia",
-    pfp: "./src/assets/pfp5.jpeg",
+    pfp: "/src/assets/pfp5.jpeg",
     toview: false,
     at: "@ClemenV",
   },
   {
     name: "Sherman",
-    pfp: "./src/assets/pfp3.jpeg",
+    pfp: "/assets/pfp3.jpeg",
     toview: false,
     at: "@Shermanpi",
   },
   {
     name: "Daniel",
-    pfp: "./src/assets/pfp7.jpeg",
+    pfp: "assets/pfp7.jpeg",
     toview: false,
     at: "@Juan_daniel",
   },
   {
     name: "Richard",
-    pfp: "./src/assets/pfp6.jpeg",
+    pfp: "./assets/pfp6.jpeg",
     toview: false,
     at: "@MoralesR",
   },

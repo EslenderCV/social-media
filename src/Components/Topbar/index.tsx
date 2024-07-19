@@ -5,7 +5,7 @@ import ChatBubbleOutlineRoundedIcon from "@mui/icons-material/ChatBubbleOutlineR
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import userPfp from "./assets/userpfp.jpeg";
+import userPfp from "../../assets/userpfp.jpeg";
 
 const user = {
   name: "Eslender Cruz",
